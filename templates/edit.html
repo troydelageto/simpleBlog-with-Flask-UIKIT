@@ -1,0 +1,49 @@
+
+
+<h1>Enter New Posts Here!</h1>
+
+  <div class="wrapper-display">
+    <!-- Form display  -->
+    <div class="form-wrapper">
+      <form action="/posts" method="POST" class="uk-margin-top">
+        <div class="uk-margin">
+          <div class="uk-block">
+            <span class="uk-form-icon" uk-icon="icon: user"></span>
+            <input
+              class="uk-input"
+              name="title"
+              id="title"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+
+        <div class="uk-margin">
+          <div class="uk-block">
+            <textarea
+              placeholder="Enter Text"
+              name="Content"
+              class="uk-textarea"
+              rows="9"
+              placeholder="Textarea"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="uk-margin">
+          <div class="uk-block">
+            Author
+            <input class="uk-input" name="Author" type="text" />
+          </div>
+        </div>
+
+        <div class="uk-margin" uk-margin>
+          <button type="submit" class="uk-button uk-button-primary">
+            Submit Post
+          </button>
+        </div>
+      </form>
+
+      <!-- End of Form display  -->
+    </div>

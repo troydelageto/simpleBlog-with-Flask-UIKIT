@@ -1,0 +1,23 @@
+/* *{
+    box-sizing: border-box;
+}
+
+.wrapper-display{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+.form-wrapper{
+  width:45%
+}
+
+.blog-wrapper{
+    width: 45%;
+}
+
+.form-wrapper form{
+    width:100%;
+    margin-left:2rem;
+} */
