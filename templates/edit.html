@@ -1,20 +1,27 @@
+{% extends 'base.html'%}
+
+{% block head %}
+<title>Edit Page</title>
+{% endblock %}
 
 
-<h1>Enter New Posts Here!</h1>
+
+{% block body%}
+<h1>Edit Posts here</h1>
 
   <div class="wrapper-display">
     <!-- Form display  -->
     <div class="form-wrapper">
-      <form action="/posts" method="POST" class="uk-margin-top">
+      <form action="/posts/edit/{{post.id}}" method="POST" class="uk-margin-top">
         <div class="uk-margin">
           <div class="uk-block">
-            <span class="uk-form-icon" uk-icon="icon: user"></span>
+            Title
             <input
               class="uk-input"
               name="title"
               id="title"
               type="text"
-              value=""
+              value="{{post.title}}"
             />
           </div>
         </div>
@@ -25,25 +32,28 @@
               placeholder="Enter Text"
               name="Content"
               class="uk-textarea"
-              rows="9"
+              rows="3"
               placeholder="Textarea"
-            ></textarea>
+              
+            >{{post.Content}}</textarea>
           </div>
         </div>
 
         <div class="uk-margin">
           <div class="uk-block">
             Author
-            <input class="uk-input" name="Author" type="text" />
+            <input class="uk-input" name="Author" type="text" value="{{post.Author}}" />
           </div>
         </div>
 
         <div class="uk-margin" uk-margin>
           <button type="submit" class="uk-button uk-button-primary">
-            Submit Post
+            Save Post
           </button>
         </div>
       </form>
 
       <!-- End of Form display  -->
     </div>
+
+{% endblock  %}

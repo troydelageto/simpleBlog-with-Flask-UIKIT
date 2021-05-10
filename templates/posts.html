@@ -1,10 +1,6 @@
 {% extends 'base.html'%} {% block head%} <title>Posts</title>{%endblock%}
 {%block body%}
 
-
-
-
-
   <!-- Form display  -->
   <h1>Enter New Posts Here!</h1>
 
@@ -14,7 +10,7 @@
       <form action="/posts" method="POST" class="uk-margin-top">
         <div class="uk-margin">
           <div class="uk-block">
-            <span class="uk-form-icon" uk-icon="icon: user"></span>
+            Title
             <input
               class="uk-input"
               name="title"
@@ -27,11 +23,12 @@
 
         <div class="uk-margin">
           <div class="uk-block">
+            Content
             <textarea
               placeholder="Enter Text"
               name="Content"
               class="uk-textarea"
-              rows="9"
+              rows="3"
               placeholder="Textarea"
             ></textarea>
           </div>
@@ -71,7 +68,7 @@
           <span class="author">N/A</span>
           {%endif%}
 
-          <p><span> Content </span> Content :{{post.Content}}</p>
+          <p><span> Content </span>:{{post.Content}}</p>
           <a href="/posts/delete/{{post.id}}" >Delete</>
           
            <a href="/posts/edit/{{post.id}}">Edit</>

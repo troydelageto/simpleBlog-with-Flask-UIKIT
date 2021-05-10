@@ -75,13 +75,16 @@ def delete(id):
 # edit route
 @app.route('/posts/edit/<int:id>',methods=['GET','POST'])
 def edit(id):
+    post=AllBlogPost.query.get_or_404(id)
     if request.method=='POST':
-        post=AllBlogPost.query.get_or_404(id)
+       
         post.title=request.form['title']
         post.Author=request.form['Author']
         post.Content=request.form['Content']
         db.session.commit()
-        return
+        return redirect('/posts')
+    else:
+        return render_template('edit.html',post=post)
 
 
 @app.route('/home/<string:name>')
